@@ -33,6 +33,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_alignTop="@+id/image"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
                 android:text="@string/contest_code" />
 
             <TextView
@@ -53,6 +55,9 @@
                 android:layout_alignParentLeft="true"
                 android:layout_margin="10dp"
                 android:text="Starts On:" />
+                android:layout_toEndOf="@+id/image"
+                android:text="Starts On:"
+                android:layout_below="@+id/contestName" />
 
             <TextView
                 android:id="@+id/startDateNum"
@@ -61,6 +66,10 @@
                 android:layout_below="@+id/startDate"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="10dp"
+                android:layout_alignBaseline="@+id/endDate"
+                android:layout_alignBottom="@+id/endDate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="5dp"
                 android:text="00-00-0000" />
 
             <TextView
@@ -71,6 +80,10 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignBaseline="@id/startDate"
                 android:layout_margin="10dp"
+                android:layout_alignBaseline="@+id/endDateNum"
+                android:layout_alignBottom="@+id/endDateNum"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@+id/endDateNum"
                 android:text="Ends On:" />
 
             <TextView
@@ -81,7 +94,11 @@
                 android:layout_alignBaseline="@id/startDateNum"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:text="22-00-0000" />
+                android:layout_alignBaseline="@+id/startDate"
+                android:layout_alignBottom="@+id/startDate"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/startDate"
+                android:text="00-00-0000" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>
